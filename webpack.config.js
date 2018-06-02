@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: "development",
   entry: "./js/app.js",
   output: {
     path: path.join(__dirname, "/public"),
@@ -15,10 +16,19 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: [['env'], ['react']]
+              presets: [
+                ['env', { 'modules': false }],
+                'react'
+              ]
             }
           }
         ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        enforce: 'pre',
+        loader: 'eslint-loader'
       }
     ]
   }
