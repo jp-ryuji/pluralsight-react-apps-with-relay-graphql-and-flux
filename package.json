@@ -4,7 +4,7 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "babel-node": "babel-node server.js",
+    "babel-node": "babel-node --presets react,env server.js",
     "start": "nodemon --exec npm run babel-node server.js"
   },
   "dependencies": {
