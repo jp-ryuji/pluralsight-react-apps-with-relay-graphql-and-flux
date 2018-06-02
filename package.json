@@ -1,10 +1,11 @@
 {
   "name": "pluralsight-react-apps-with-relay-graphql-and-flux",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node server.js"
+    "babel-node": "babel-node server.js",
+    "start": "nodemon --exec npm run babel-node server.js"
   },
   "dependencies": {
     "express": "^4.16.3"
