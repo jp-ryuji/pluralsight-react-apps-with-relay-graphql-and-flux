@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "babel-node": "babel-node --presets react,env server.js",
-    "start": "nodemon --exec npm run babel-node server.js"
+    "start": "nodemon --exec npm run babel-node server.js",
+    "dev": "webpack --mode development --watch -d",
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "express": "^4.16.3",
